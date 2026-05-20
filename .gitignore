@@ -4,3 +4,22 @@ build
 # West files
 .west
 deps
+
+# Zephyr
+zephyr/
+modules/
+bootloader/
+.west/
+tools/
+
+# Build
+build/
+
+# Python
+.venv/
+__pycache__/
+
+# OS
+*.log
+*.tmp
+git
