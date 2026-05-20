@@ -1,0 +1,28 @@
+git init
+git remote add origin https://github.com/TU-USUARIO/zephyr-course
+git remote -v
+git add .
+git commit -m "Initial commit with App_L1"
+git branch -M main
+git push -u origin main
+git pull origin main --rebase
+git push
+
+# Flujo West - Git commit
+west init -l .
+west update
+west zephyr-export
+
+mkdir App_L1
+cp -r zephyr/samples/basic/blinky/* App_L1
+
+west build -b nucleo_h7s3l8 App_L1
+
+west flash
+
+git add .
+git commit -m "L1 blink working"
+git push
+
+git tag l2-task1
+git push origin l2-task1
