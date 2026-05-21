@@ -1,0 +1,6 @@
+CompileFlags:
+  Remove:
+    - -fno-reorder-functions
+    - -fno-common
+    - -fno-printf-return-value
+    - -mfp16-format=ieee

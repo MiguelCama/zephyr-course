@@ -16,7 +16,7 @@ west zephyr-export
 mkdir App_L1
 cp -r zephyr/samples/basic/blinky/* App_L1
 
-west build -b nucleo_h7s3l8 App_L1
+west build -b nucleo_h7s3l8 App_L1 //// west build -b nucleo_h7s3l8 app --pristine
 
 west flash
 
@@ -26,3 +26,20 @@ git push
 
 git tag l2-task1
 git push origin l2-task1
+
+pip install west
+
+# antes del build verifica las variables de entorno
+# atencion a python ninja cmake
+
+
+$env:PATH="C:\Program Files\CMake\bin;C:\Users\Miguel_Cama\zephyrproject\.venv\Scripts"
+
+# Siempre correr :
+
+.\setup-zephyr.ps1
+west build -b nucleo_h7s3l8 app --pristine
+west -v build -t menuconfig
+west flash
+
+
