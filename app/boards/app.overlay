@@ -1,0 +1,6 @@
+/ {
+    /*In my board : led0 = &green_led;   */
+    aliases {
+        app-led = &green_led;
+    };
+};

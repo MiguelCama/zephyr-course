@@ -58,4 +58,9 @@ endif
 
 endif
 
+menuconfig APP_HEARTBEAT_PERIOD_MS
+    int "Fade duration (ms)"
+    range 0 2000
+    default 500
+
 source "Kconfig.zephyr"
