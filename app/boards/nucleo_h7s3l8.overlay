@@ -1,0 +1,15 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+    leds {
+        compatible = "gpio-leds";
+
+        yellow_led0: led_4 {
+            gpios = <&gpiod 13 GPIO_ACTIVE_HIGH>;
+        };
+
+        red_led0: led_5 {
+            gpios = <&gpiob 7 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};

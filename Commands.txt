@@ -43,3 +43,19 @@ west -v build -t menuconfig
 west flash
 
 
+**************************************************************
+Missing Leds :
+
+/* node '/leds/led_2' defined in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:31 */
+		yellow_led: led_2 {
+			gpios = < &gpiod 0xd 0x0 >; /* in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:32 */
+			label = "User LD2";         /* in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:33 */
+		};
+
+		/* node '/leds/led_3' defined in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:36 */
+		red_led: led_3 {
+			gpios = < &gpiob 0x7 0x0 >; /* in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:37 */
+			label = "User LD3";         /* in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:38 */
+		};
+
+

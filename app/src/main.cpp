@@ -1,6 +1,7 @@
 //
 
 
+#include "zephyr/devicetree.h"
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
@@ -8,7 +9,8 @@
 //#define SLEEP_TIME_MS 200
 
 /* The devicetree node identifier for the "led0" alias. */
-#define LED_NODE DT_ALIAS(led0)
+#define LED_NODE DT_ALIAS(warning_led)
+//#define LED_NODE DT_NODELABEL(yellow_led0)
 
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED_NODE, gpios);
 
