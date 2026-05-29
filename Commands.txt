@@ -27,6 +27,8 @@ git push
 git tag l2-task1
 git push origin l2-task1
 
+git config user.email
+
 pip install west
 
 # antes del build verifica las variables de entorno
@@ -58,4 +60,6 @@ Missing Leds :
 			label = "User LD3";         /* in zephyr\boards\st\nucleo_h7s3l8\nucleo_h7s3l8-common.dtsi:38 */
 		};
 
-
+## Agregar overlay custom
+west build -- -DEXTRA_DTC_OVERLAY_FILE="boards/red.overlay"
+****************************************************************

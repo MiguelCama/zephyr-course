@@ -12,6 +12,8 @@
 #define LED_NODE DT_ALIAS(app_led)
 //#define LED_NODE DT_NODELABEL(yellow_led0)
 
+//#define LED_NODE DT_NODELABEL(green_led)
+
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED_NODE, gpios);
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);

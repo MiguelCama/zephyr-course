@@ -1,0 +1,8 @@
+board:
+  name: our_board
+  full_name: Our Board
+  vendor: iomico
+  socs:
+    - name: stm32h7s3xx
+      variants:
+        - name: ext_flash_app
