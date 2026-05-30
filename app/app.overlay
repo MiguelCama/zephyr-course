@@ -1,0 +1,29 @@
+/ {
+    aliases {
+        app-led = &yellow_led;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+
+        yellow_led0: led_4 {
+            gpios = <&gpiod 13 GPIO_ACTIVE_HIGH>;
+        };
+
+        red_led0: led_5 {
+            gpios = <&gpiob 7 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    our_driver0: our_driver {
+        compatible = "our,driver";
+        led-gpios = <&gpiod 13 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+    };
+
+    our_driver1: our_driver1 {
+        compatible = "our,driver";
+        led-gpios = <&gpiob 7 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+    };
+};
